@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Deteksi IP</title>
+</head>
+<body>
+    <h1>Hasil Deteksi Alamat IP</h1>
+    <table border="1">
+        <tr>
+            <th>IP Address</th>
+            <th>Country</th>
+            <th>Region</th>
+            <th>City</th>
+            <th>ISP</th>
+        </tr>
+        {% for info in ip_info %}
+        <tr>
+            <td>{{ info.ip }}</td>
+            <td>{{ info.country }}</td>
+            <td>{{ info.region }}</td>
+            <td>{{ info.city }}</td>
+            <td>{{ info.isp }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">Kembali ke Halaman Upload</a>
+</body>
+</html>
